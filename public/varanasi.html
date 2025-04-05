@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Varanasi</title>
+    <link rel="stylesheet" href="/css/event.css">
+</head>
+<body>
+    <div class="city-section">
+        <h2 onclick="toggleEvent('varanasi')">Varanasi</h2>
+        <p>Immerse yourself in spiritual experiences along the sacred Ganges.</p>
+        <p><span class="event-count">Events: 3</span></p>
+        
+        <div id="varanasi" class="event-details">
+            <div class="event">
+                <h3>Ganga Aarti at Dashashwamedh Ghat</h3>
+                <p>Witness the mesmerizing evening prayer ceremony on the banks of the Ganges.</p>
+                <p><span class="price">Price: ₹500 per person</span> (premium seating with best views)</p>
+            </div>
+            <div class="event">
+                <h3>Morning Boat Ride with Sunrise View</h3>
+                <p>Experience the magical sunrise over the Ganges with a guided boat tour.</p>
+                <p><span class="price">Price: ₹1,200 per boat</span> (up to 4 people)</p>
+            </div>
+            <div class="event">
+                <h3>Banarasi Silk Weaving Workshop</h3>
+                <p>Learn about the ancient art of Banarasi silk weaving from master craftsmen.</p>
+                <p><span class="price">Price: ₹1,000 per person</span> (includes materials)</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleEvent(cityId) {
+            const eventDetails = document.getElementById(cityId);
+            if (eventDetails.style.display === "block") {
+                eventDetails.style.display = "none";
+            } else {
+                eventDetails.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

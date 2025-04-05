@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaipur</title>
+    <link rel="stylesheet" href="/css/event.css">
+</head>
+<body>
+    <div class="city-section">
+        <h2 onclick="toggleEvent('jaipur')">Jaipur</h2>
+        <p>Join us for royal heritage walks and art showcases.</p>
+        <p><span class="event-count">Events: 2</span></p>
+        
+        <div id="jaipur" class="event-details">
+            <div class="event">
+                <h3>Amber Fort Elephant Ride & Tour</h3>
+                <p>Arrive like royalty on an elephant back and explore the magnificent Amber Fort.</p>
+                <p><span class="price">Price: ₹1,800 per person</span> (includes fort entry)</p>
+            </div>
+            <div class="event">
+                <h3>Block Printing Workshop</h3>
+                <p>Learn the traditional art of Jaipur's famous block printing from master artisans.</p>
+                <p><span class="price">Price: ₹1,200 per person</span> (includes materials)</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleEvent(cityId) {
+            const eventDetails = document.getElementById(cityId);
+            if (eventDetails.style.display === "block") {
+                eventDetails.style.display = "none";
+            } else {
+                eventDetails.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

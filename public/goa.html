@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa</title>
+    <link rel="stylesheet" href="/css/event.css">
+</head>
+<body>
+    <div class="city-section">
+        <h2 onclick="toggleEvent('goa')">Goa</h2>
+        <p>Enjoy beach parties and cultural festivals in India's party capital.</p>
+        <p><span class="event-count">Events: 2</span></p>
+        
+        <div id="goa" class="event-details">
+            <div class="event">
+                <h3>Sunset Beach Party at Palolem Beach</h3>
+                <p>Experience the vibrant nightlife of Goa with DJs, live music, and delicious cocktails by the beach.</p>
+                <p><span class="price">Price: ₹1,500 per person</span> (includes 2 drinks)</p>
+            </div>
+            <div class="event">
+                <h3>Portuguese Heritage Walk in Old Goa</h3>
+                <p>Explore the UNESCO World Heritage churches and colonial architecture with expert guides.</p>
+                <p><span class="price">Price: ₹800 per person</span> (includes entry fees)</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleEvent(cityId) {
+            const eventDetails = document.getElementById(cityId);
+            if (eventDetails.style.display === "block") {
+                eventDetails.style.display = "none";
+            } else {
+                eventDetails.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi</title>
+    <link rel="stylesheet" href="/css/event.css">
+</head>
+<body>
+    <div class="city-section">
+        <h2 onclick="toggleEvent('delhi')">Delhi</h2>
+        <p>Experience cultural fests and tech expos in India's capital city.</p>
+        <p><span class="event-count">Events: 3</span></p>
+        
+        <div id="delhi" class="event-details">
+            <div class="event">
+                <h3>Red Fort Heritage Walk</h3>
+                <p>Explore the majestic Red Fort with expert historians explaining its Mughal architecture and history.</p>
+                <p><span class="price">Price: ₹750 per person</span> (includes entry fees)</p>
+            </div>
+            <div class="event">
+                <h3>India International Trade Fair</h3>
+                <p>Attend Asia's largest trade fair showcasing products from across India and the world.</p>
+                <p><span class="price">Price: ₹200 per person</span> (weekday entry)</p>
+            </div>
+            <div class="event">
+                <h3>Qutub Minar Light and Sound Show</h3>
+                <p>Experience the history of Delhi come alive through this spectacular evening show.</p>
+                <p><span class="price">Price: ₹500 per person</span> (VIP seating available)</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleEvent(cityId) {
+            const eventDetails = document.getElementById(cityId);
+            if (eventDetails.style.display === "block") {
+                eventDetails.style.display = "none";
+            } else {
+                eventDetails.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dholaveera</title>
+    <link rel="stylesheet" href="/css/event.css">
+</head>
+<body>
+    <div class="city-section">
+        <h2 onclick="toggleEvent('dholaveera')">Dholaveera</h2>
+        <p>Discover the ancient Harappan civilization at this archaeological wonder.</p>
+        <p><span class="event-count">Events: 2</span></p>
+        
+        <div id="dholaveera" class="event-details">
+            <div class="event">
+                <h3>Guided Tour of Harappan Ruins</h3>
+                <p>Explore the 4500-year-old city with expert archaeologists explaining the significance.</p>
+                <p><span class="price">Price: ₹900 per person</span> (includes entry fees)</p>
+            </div>
+            <div class="event">
+                <h3>Stargazing in the Rann of Kutch</h3>
+                <p>Experience the breathtaking night sky in one of India's darkest locations with astronomers.</p>
+                <p><span class="price">Price: ₹1,500 per person</span> (includes telescope use)</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleEvent(cityId) {
+            const eventDetails = document.getElementById(cityId);
+            if (eventDetails.style.display === "block") {
+                eventDetails.style.display = "none";
+            } else {
+                eventDetails.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

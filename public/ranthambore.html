@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranthambore</title>
+    <link rel="stylesheet" href="/css/event.css">
+</head>
+<body>
+    <div id="ranthambore" class="event-details">
+        <div class="event">
+            <h3>Morning Jungle Safari</h3>
+            <p>Spot tigers and other wildlife in their natural habitat with expert guides.</p>
+            <p><span class="price">Price: ₹2,500 per person</span> (includes park fees)</p>
+        </div>
+        <div class="event">
+            <h3>Ranthambore Fort Sunset Tour</h3>
+            <p>Explore the historic fort with breathtaking views of the national park.</p>
+            <p><span class="price">Price: ₹800 per person</span></p>
+        </div>
+        <div class="event">
+            <h3>Nature Photography Workshop</h3>
+            <p>Learn wildlife photography techniques from professionals in the field.</p>
+            <p><span class="price">Price: ₹3,500 per person</span> (includes lunch)</p>
+        </div>
+    </div>
+</div>
+    <script>
+        function toggleEvent(cityId) {
+            const eventDetails = document.getElementById(cityId);
+            if (eventDetails.style.display === "block") {
+                eventDetails.style.display = "none";
+            } else {
+                eventDetails.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>

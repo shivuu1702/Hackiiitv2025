@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - Explore India</title>
+  <link rel="stylesheet" href="/css/signup.css">
+</head>
+<body>
+
+  <div class="logo">Explore India</div>
+  <div class="container">
+    <h2>Create Account</h2>
+    <p class="description">Join us and start your exploration journey</p>
+    
+    <form id="signupForm">
+      <input type="text" name="fullname" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="password" name="password" placeholder="Create Password" required />
+      <input type="password" name="confirmPassword" placeholder="Confirm Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div class="or-divider">OR</div>
+
+    <div class="social-icons">
+      <button type="button">f</button>
+      <button type="button">G</button>
+      <button type="button">in</button>
+    </div>
+
+    <div class="footer">
+      Already have an account? <a href="login.html">Sign In</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', async function(e) {
+      e.preventDefault(); // prevent default form submission
+
+      const fullname = e.target.fullname.value;
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+      const confirmPassword = e.target.confirmPassword.value;
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match!");
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:3000/api/auth/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ fullname, email, password })
+        });
+
+        if (response.ok) {
+          alert("Signup successful!");
+          window.location.href = "login.html"; // redirect to login page
+        } else {
+          const data = await response.json();
+          alert("Signup failed: " + data.message);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred during signup.");
+      }
+    });
+  </script>
+</body>
+</html>
